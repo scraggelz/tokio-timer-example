@@ -1,0 +1,32 @@
+[package]
+name = "tokio_timer_example"
+version = "0.1.0"
+authors = ["scragglez <rm9402@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tungstenite="0.13.0"
+tokio-tungstenite="0.14.0"
+tokio={version="1.5.0", features=["full"]}
+url="2.1.1"
+log = "0.4"
+futures-util = { version = "0.3", default-features = false, features = ["async-await", "sink", "std"] }
+futures-channel = "0.3"
+futures = "*"
+pin-project = "1.0"
+crossbeam-channel = "*"
+
+[[bin]]
+name = "main"
+path = "src/main.rs"
+
+[[bin]]
+name = "server"
+path = "src/server.rs"
+
+
+[[bin]]
+name = "client"
+path = "src/client.rs"
